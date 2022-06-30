@@ -1,0 +1,46 @@
+apiVersion: app.yndd.io/v1
+apiVersion: app.yndd.io/v1
+kind: ResourceContext
+input:
+  origin: 
+    apiVersion: topo.yndd.io/v1alpha1
+    kind: Definition
+    metadata:
+      name: nokia.region1.fabric1
+      namespace: ndd-system
+    spec:
+      properties:
+        discoveryRules:
+        - name: dr1
+  target:
+    apiVersion: target.yndd.io/v1
+    kind: Target
+    metadata:
+      name: leaf1.sim.1a-b0-02-ff-00-00
+      namespace: ndd-system
+    spec:
+      discoveryInfo:
+        hostname: leaf1
+        lastSeen: '2022-06-27T16:15:21Z'
+        macAddress: 1A:B0:02:FF:00:00
+        platform: 7220 IXR-D2
+        serialNumber: Sim Serial No.
+        supportedEncodings:
+          - JSON_IETF
+          - ASCII
+          - '45'
+          - '44'
+          - '46'
+          - '47'
+          - '48'
+          - '49'
+          - '50'
+        swVersion: v21.11.2-72-ga92f5b2ae1
+        vendorType: nokiaSRL
+      properties:
+        config:
+          address: 172.20.20.3:57400
+          credentialName: dr1-credentials
+          protocol: gnmi
+          skipVerify: true
+        vendorType: nokiaSRL
